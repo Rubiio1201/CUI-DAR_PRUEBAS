@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación </title>
+    <style>
+      /* Estilos CSS */
+      body {
+          font-family: Arial, sans-serif;
+          background: linear-gradient(90deg, #16A085, #F4D03F);
+      }
+
+      
+      </style>
+    
+</head>
+<body>
+    <h2>Se integra la ATENCIÓN SOCIAL en el Plan de Atención del paciente y la familia</h2>
+    <form id="formulario">
+        <div id="pregunta1" class="pregunta">
+            <label for="encabezado">¿Se conocen las necesidades sociales básicas del paciente/unidad familiar?</label>
+            <label for="pregunta1">¿Existen conflictos familiares en este momento?</label><br>
+            <input type="radio" id="pregunta1_si" name="pregunta1" value="si">
+            <label for="pregunta1_si">Sí</label>
+            <input type="radio" id="pregunta1_no" name="pregunta1" value="no">
+            <label for="pregunta1_no">No</label>
+            <input type="radio" id="pregunta1_np/nv" name="pregunta1" value="np/nv">
+            <label for="pregunta1_np/nv">NP/NV</label><br>
+            <br>
+            <label for="pregunta2">¿Es necesario informar al familiar o cuidador sobre la gestión de los servicios fúnebres?</label><br>
+            <input type="radio" id="pregunta2_si" name="pregunta2" value="si">
+            <label for="pregunta2_si">Sí</label>
+            <input type="radio" id="pregunta2_no" name="pregunta2" value="no">
+            <label for="pregunta2_no">No</label>
+            <input type="radio" id="pregunta2_np/nv" name="pregunta2" value="np/nv">
+            <label for="pregunta2_np/nv">NP/NV</label><br>
+            <br>
+            <label for="pregunta3">¿Es necesaria la reagrupación familiar? (Prisión,centro de menores,residencia en otr comunidad/país, otros) </label><br>
+            <input type="radio" id="pregunta3_si" name="pregunta3" value="si">
+            <label for="pregunta3_si">Sí</label>
+            <input type="radio" id="pregunta3_no" name="pregunta3" value="no">
+            <label for="pregunta3_no">No</label>
+            <input type="radio" id="pregunta3_np/nv" name="pregunta3" value="np/nv">
+            <label for="pregunta3_np/nv">NP/NV</label><br>
+            <br>
+            <br>
+            <label for="pregunta4">¿Es un caso de exclusión social? </label><br>
+            <input type="radio" id="pregunta4_si" name="pregunta4" value="si">
+            <label for="pregunta4_si">Sí</label>
+            <input type="radio" id="pregunta4_no" name="pregunta4" value="no">
+            <label for="pregunta4_no">No</label>
+            <input type="radio" id="pregunta4_np/nv" name="pregunta4" value="np/nv">
+            <label for="pregunta4_np/nv">NP/NV</label><br>
+            <br>
+            <br>
+            <label for="pregunta5">¿Hay riesgo de claudicación familiar? </label><br>
+            <input type="radio" id="pregunta5_si" name="pregunta5" value="si">
+            <label for="pregunta5_si">Sí</label>
+            <input type="radio" id="pregunta5_no" name="pregunta5" value="no">
+            <label for="pregunta5_no">No</label>
+            <input type="radio" id="pregunta5_np/nv" name="pregunta5" value="np/nv">
+            <label for="pregunta5_np/nv">NP/NV</label><br>
+            <br>
+            <br>
+            <label for="pregunta6">¿Se verbalizan necesidades de asesoramiento orientación? (Pensiones,herencias,testamento,custodia de menores...) </label><br>
+            <input type="radio" id="pregunta6_si" name="pregunta6" value="si">
+            <label for="pregunta6_si">Sí</label>
+            <input type="radio" id="pregunta6_no" name="pregunta6" value="no">
+            <label for="pregunta6_no">No</label>
+            <input type="radio" id="pregunta6_np/nv" name="pregunta6" value="np/nv">
+            <label for="pregunta6_np/nv">NP/NV</label><br>
+            <br>
+            <button type="button" onclick="mostrarAnterior('pregunta1', 'pregunta2')">Siguiente</button>
+            <button type="button" id="botonEnviar" onclick="window.location.href = 'A3.html';">Atrás</button>
+
+
+
+
+        </div>
+        <div id="pregunta2" class="pregunta" style="display: none;">
+            <label for="pregunta7">¿Es necesaria la valoración por Trabajo Social del EID?</label><br>
+            <input type="radio" id="pregunta7_si" name="pregunta7" value="si">
+            <label for="pregunta7_si">Sí</label>
+            <input type="radio" id="pregunta7_no" name="pregunta7" value="no">
+            <label for="pregunta7_no">No</label>
+            <input type="radio" id="pregunta1_np/nv" name="pregunta7" value="np/nv">
+            <label for="pregunta7_np/nv">NP/NV</label><br>
+            <br>
+            <button type="button" id="botonEnviar" onclick="window.location.href = 'A3.3.html';">Siguiente</button>
+            <button type="button" onclick="mostrarAnterior('pregunta2', 'pregunta1')">Atrás</button>
+        </div>
+        </form>
+
+
+<script>
+
+    function mostrarSiguiente(actual, siguiente) {
+                 document.getElementById(actual).style.display = "none";
+                  document.getElementById(siguiente).style.display = "block";
+            }
+            
+            function mostrarAnterior(actual, anterior) {
+                  document.getElementById(actual).style.display = "none";
+                  document.getElementById(anterior).style.display = "block";
+            }
+ </script>
+        </body>
+        </html>
+                        
+            

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación Inicial</title>
+    <style>
+      /* Estilos CSS */
+      body {
+          font-family: Arial, sans-serif;
+          background: linear-gradient(90deg, #16A085, #F4D03F);
+      }
+      
+      </style>
+    
+</head>
+<body>
+  
+    <h2>Comunicación e información proceso de toma de decisiones</h2>
+    <form id="formularioRespuestas">
+        <div id="pregunta1" class="pregunta">
+            <label for="pregunta1">¿Adopta el paciente un papel pleno y activo en la comunicación?</label><br>
+            <input type="radio" id="pregunta1_si" name="pregunta1" value="si">
+            <label for="pregunta1_si">Sí</label>
+            <input type="radio" id="pregunta1_no" name="pregunta1" value="no">
+            <label for="pregunta1_no">No</label>
+            <input type="radio" id="pregunta1_np/nv" name="pregunta1" value="np/nv">
+            <label for="pregunta1_np/nv">NP/NV</label><br>
+            <br>
+            <label for="pregunta2">¿Adopta el familiar un papel pleno y activo en la comunicación?</label><br>
+            <input type="radio" id="pregunta2_si" name="pregunta2" value="si">
+            <label for="pregunta2_si">Sí</label>
+            <input type="radio" id="pregunta2_no" name="pregunta2" value="no">
+            <label for="pregunta2_no">No</label>
+            <input type="radio" id="pregunta2_np/nv" name="pregunta2" value="np/nv">
+            <label for="pregunta2_np/nv">NP/NV</label><br>
+            <br>
+            <label for="pregunta3">Evaluar barreras potenciales que dificultan o impiden la comunicación: confusión, visión, habla, trastorno neurológico, trastorno mental, connfusión, somnolencia, otros (especificar)</label><br>
+            <br>
+          <label for="subpregunta3_paciente">Paciente:</label>
+          <input type="text" id="subpregunta3_paciente" name="subpregunta3_paciente" required>
+          <label for="subpregunta3_idioma_paciente">Idioma:</label>
+          <input type="text" id="subpregunta3_idioma_paciente" name="subpregunta3_idioma_paciente" required><br>
+          <br>
+          <label for="subpregunta3_familia">Familia:</label>
+          <input type="text" id="subpregunta3_familia" name="subpregunta3_familia" required>
+          <label for="subpregunta3_idioma_familia">Idioma:</label>
+          <input type="text" id="subpregunta3_idioma_familia" name="subpregunta3_idioma_familia" required><br>           
+            <button type="button" onclick="mostrarSiguiente('pregunta1')">Siguiente</button>
+        </div>
+        <div id="pregunta4" class="pregunta" style="display: none;">
+            <label for="pregunta4">¿El paciente quiere ser informado?</label><br>
+            <ul>
+                <li>
+                    <label for="subpregunta3_1">¿Sobre su diagnóstico?</label><br>
+                    <input type="radio" id="subpregunta3_1_si" name="subpregunta3_1" value="si">
+                    <label for="subpregunta3_1_si">Sí</label>
+                    <input type="radio" id="subpregunta3_1_no" name="subpregunta3_1" value="no">
+                    <label for="subpregunta3_1_no">No</label>
+                    <input type="radio" id="subpregunta3_1_np/nv" name="subpregunta3_1" value="np/nv">
+                    <label for="subpregunta3_1_np/nv">NP/NV</label>
+                </li>
+                <li>
+                    <label for="subpregunta3_2">¿Sobre su pronóstico?</label><br>
+                    <input type="radio" id="subpregunta3_2_si" name="subpregunta3_2" value="si">
+                    <label for="subpregunta3_2_si">Sí</label>
+                    <input type="radio" id="subpregunta3_2_no" name="subpregunta3_2" value="no">
+                    <label for="subpregunta3_2_no">No</label>
+                    <input type="radio" id="subpregunta3_2_np/nv" name="subpregunta3_2" value="np/nv">
+                    <label for="subpregunta3_2_np/nv">NP/NV</label>
+                </li>
+            </ul>
+            <button type="button" onclick="mostrarSiguiente('pregunta4')">Siguiente</button>
+            <button type="button" onclick="mostrarAnterior('pregunta4')">Atrás</button>
+        </div>
+
+        <div id="pregunta6" class="pregunta" style="display: none;">
+          <label for="pregunta6">¿El paciente quiere que se comparta la información sobre su situación?</label><br>
+          <label for="compartir_info">Compartir la información con:</label> <br>
+          <input type="text" id="compartir_info" name="compartir_info" ><br>
+          <label for="no_compartir_info">No compartir la información con:</label> <br>
+          <input type="text" id="no_compartir_info" name="no_compartir_info" ><br>
+          <button type="button" onclick="mostrarSiguiente('pregunta6')">Siguiente</button>
+          <button type="button" onclick="mostrarAnterior('pregunta6')">Atrás</button>
+      </div>
+
+      <div id="pregunta7" class="pregunta" style="display: none;">
+        <label for="pregunta7">¿Está informado su MAP/Centro de Salud que el paciente está falleciendo?</label><br>
+        <input type="radio" id="pregunta4_si" name="pregunta4" value="si">
+        <label for="pregunta4_si">Sí</label>
+        <input type="radio" id="pregunta4_no" name="pregunta4" value="no">
+        <label for="pregunta4_no">No</label>
+        <input type="radio" id="pregunta4_np/nv" name="pregunta4" value="np/nv">
+        <label for="pregunta4_np/nv">NP/NV</label><br>
+        <button type="button" onclick="mostrarSiguiente('pregunta7')">Siguiente</button>
+        <button type="button" onclick="mostrarAnterior('pregunta7')">Atrás</button>
+    </div>
+
+    <div id="pregunta8" class="pregunta" style="display: none;">
+      <label for="pregunta8">¿Cómo conocemos las preferencias del paciente en relación al lugar donde quiere fallecer?</label><br>
+      <input type="text" id="preferencias_paciente" name="preferencias_paciente" ><br>
+      <label for="consenso_familiar">¿Hay consenso con la familia?</label><br>
+      <input type="radio" id="consenso_familiar_si" name="consenso_familiar" value="si">
+      <label for="consenso_familiar_si">Sí</label>
+      <input type="radio" id="consenso_familiar_no" name="consenso_familiar" value="no">
+      <label for="consenso_familiar_no">No</label>
+      <input type="radio" id="consenso_familiar_np/nv" name="consenso_familiar" value="np/nv">
+      <label for="consenso_familiar_np/nv">NP/NV</label><br>
+      <button type="button" onclick="mostrarSiguiente('pregunta8')">Siguiente</button>
+      <button type="button" onclick="mostrarAnterior('pregunta8')">Atrás</button>
+  </div>
+  
+<div id="pregunta9" class="pregunta" style="display: none;">
+  <label for="pregunta9">¿Están informados los profesionales del EID de que el paciente está fallecimiento?</label><br>
+  <input type="radio" id="pregunta9_si" name="pregunta9" value="si">
+  <label for="pregunta9_si">Sí</label>
+  <input type="radio" id="pregunta9_no" name="pregunta9" value="no">
+  <label for="pregunta9_no">No</label>
+  <input type="radio" id="pregunta9_np/nv" name="pregunta9" value="np/nv">
+  <label for="pregunta9_np/nv">NP/NV</label><br>
+  <button type="button" onclick="mostrarSiguiente('pregunta9')">Siguiente</button>
+  <button type="button" onclick="mostrarAnterior('pregunta9')">Atrás</button>
+</div>
+
+<!-- Pregunta 9 -->
+<div id="pregunta10" class="pregunta" style="display: none;">
+  <label for="pregunta10">¿Hay conspiración de silencio?</label><br>
+  <input type="radio" id="pregunta10_si" name="pregunta10" value="si">
+  <label for="pregunta10_si">Sí</label>
+  <input type="radio" id="pregunta10_no" name="pregunta10" value="no">
+  <label for="pregunta10_no">No</label>
+  <input type="radio" id="pregunta10_np/nv" name="pregunta10" value="np/nv">
+  <label for="pregunta10_np/nv">NP/NV</label><br>
+  <button type="button" onclick="mostrarSiguiente('pregunta10')">Siguiente</button>
+  <button type="button" onclick="mostrarAnterior('pregunta10')">Atrás</button>
+</div>
+
+<div id="pregunta11" class="pregunta" style="display: none;">
+  <label for="pregunta11">Pacientes niños/adolescentes, ¿Se les proporciona información adecuada para su edad? </label><br>
+  <input type="radio" id="pregunta11_si" name="pregunta11" value="si">
+  <label for="pregunta11_si">Sí</label>
+  <input type="radio" id="pregunta11_no" name="pregunta11" value="no">
+  <label for="pregunta11_no">No</label>
+  <input type="radio" id="pregunta11_np/nv" name="pregunta11" value="np/nv">
+  <label for="pregunta11_np/nv">NP/NV</label><br>
+  <button type="button" onclick="mostrarSiguiente('pregunta11')">Siguiente</button>
+  <button type="button" onclick="mostrarAnterior('pregunta11')">Atrás</button>
+</div>
+
+<div id="pregunta12" class="pregunta" style="display: none;">
+  <label for="pregunta12">¿El paciente es consciente de que está falleciendo? </label><br>
+  <input type="radio" id="pregunta12_si" name="pregunta12" value="si">
+  <label for="pregunta12_si">Sí</label>
+  <input type="radio" id="pregunta12_no" name="pregunta12" value="no">
+  <label for="pregunta12_no">No</label>
+  <input type="radio" id="pregunta12_np/nv" name="pregunta12" value="np/nv">
+  <label for="pregunta12_np/nv">NP/NV</label><br>
+  <button type="button" onclick="mostrarSiguiente('pregunta12')">Siguiente</button>
+  <button type="button" onclick="mostrarAnterior('pregunta12')">Atrás</button>
+</div>
+
+<div id="pregunta13" class="pregunta" style="display: none;">
+  <label for="pregunta13">¿El familiar o cuidador/a ha sido informado de que está falleciendo? </label><br>
+  <input type="radio" id="pregunta13_si" name="pregunta13" value="si">
+  <label for="pregunta13_si">Sí</label>
+  <input type="radio" id="pregunta13_no" name="pregunta13" value="no">
+  <label for="pregunta13_no">No</label>
+  <input type="radio" id="pregunta13_np/nv" name="pregunta13" value="np/nv">
+  <label for="pregunta13_np/nv">NP/NV</label><br>
+  <label for="pregunta14">¿El familiar o cuidador/a es consciente de que está falleciendo? </label><br>
+  <input type="radio" id="pregunta14_si" name="pregunta14" value="si">
+  <label for="pregunta14_si">Sí</label>
+  <input type="radio" id="pregunta14_no" name="pregunta14" value="no">
+  <label for="pregunta14_no">No</label>
+  <input type="radio" id="pregunta14_np/nv" name="pregunta14" value="np/nv">
+  <label for="pregunta14_np/nv">NP/NV</label><br>
+  <button type="button" onclick="mostrarSiguiente('pregunta13')">Siguiente</button>
+  <button type="button" onclick="mostrarAnterior('pregunta13')">Atrás</button>
+</div>
+
+<div id="pregunta15" class="pregunta" style="display: none;">
+  <label for="pregunta15">¿Se han conseguido los objetivos del plan de atención con el paciente?</label><br>
+  <input type="radio" id="pregunta15_si" name="pregunta15" value="si">
+  <label for="pregunta15_si">Sí</label>
+  <input type="radio" id="pregunta15_no" name="pregunta15" value="no">
+  <label for="pregunta15_no">No</label>
+  <input type="radio" id="pregunta15_np/nv" name="pregunta15" value="np/nv">
+  <label for="pregunta15_np/nv">NP/NV</label><br>
+  <label for="pregunta16">¿Se han consensuado los objetivos del plan de atención con el familiar o cuidador/a?</label><br>
+  <input type="radio" id="pregunta16_si" name="pregunta16" value="si">
+  <label for="pregunta16_si">Sí</label>
+  <input type="radio" id="pregunta16_no" name="pregunta16" value="no">
+  <label for="pregunta16_no">No</label>
+  <input type="radio" id="pregunta16_np/nv" name="pregunta16" value="np/nv">
+  <label for="pregunta16_np/nv">NP/NV</label><br>
+  <label for="pregunta17">¿El paciente es capaz de tomar decisiones sobre su tratamiento y cuidados en este momento?</label><br>
+  <input type="radio" id="pregunta17_si" name="pregunta17" value="si">
+  <label for="pregunta16_si">Sí</label>
+  <input type="radio" id="pregunta17_no" name="pregunta17" value="no">
+  <label for="pregunta17_no">No</label>
+  <input type="radio" id="pregunta17_np/nv" name="pregunta17" value="np/nv">
+  <label for="pregunta17_np/nv">NP/NV</label><br>
+  <button type="button" onclick="mostrarSiguiente('pregunta15')">Siguiente</button>
+  <button type="button" onclick="mostrarAnterior('pregunta15')">Atrás</button>
+</div>
+
+<div id="pregunta118" class="pregunta" style="display: none;">
+  <label for="preguntasF">¿El paciente tiene documento de Voluntades Anticipadas? </label><br>
+  <br>
+  <label for="pregunta18">¿Tiene el documento registrado? </label><br>
+  <input type="radio" id="pregunta18_si" name="pregunta18" value="si">
+  <label for="pregunta15_si">Sí</label>
+  <input type="radio" id="pregunta18_no" name="pregunta18" value="no">
+  <label for="pregunta18_no">No</label>
+  <input type="radio" id="pregunta18_np/nv" name="pregunta18" value="np/nv">
+  <label for="pregunta18_np/nv">NP/NV</label><br>
+  <br>
+  <label for="pregunta19">¿Tenemos acceso al documento de Voluntades Anticipadas? </label><br>
+  <input type="radio" id="pregunta19_si" name="pregunta19" value="si">
+  <label for="pregunta19_si">Sí</label>
+  <input type="radio" id="pregunta19_no" name="pregunta19" value="no">
+  <label for="pregunta19_no">No</label>
+  <input type="radio" id="pregunta19_np/nv" name="pregunta19" value="np/nv">
+  <label for="pregunta19_np/nv">NP/NV</label><br>
+  <br>
+  <label for="pregunta20">Otros deseos expresados por el paciente</label><br>
+  <input type="text" id="deseos_paciente" name="deseos_paciente" ><br>
+  <br>
+  <label for="pregunta21">El paciente,¿Tiene un representante legal asignado? </label><br>
+  <input type="radio" id="pregunta121_si" name="pregunta121" value="si">
+  <label for="pregunta21_si">Sí</label>
+  <input type="radio" id="pregunta21_no" name="pregunta21" value="no">
+  <label for="pregunta21_no">No</label>
+  <input type="radio" id="pregunta21_np/nv" name="pregunta21" value="np/nv">
+  <label for="pregunta21_np/nv">NP/NV</label><br>
+  <label for="subpregunta21_paciente">Nombre:</label>
+  <input type="text" id="subpregunta21_paciente" name="subpregunta21_paciente"><br>
+  <br>
+  <label for="pregunta22">¿El paciente ha rechazado algún tratamiento o intervención en el momento actual? </label><br>
+  <input type="radio" id="pregunta2_si" name="pregunta22" value="si">
+  <label for="pregunta19_si">Sí</label>
+  <input type="radio" id="pregunta22_no" name="pregunta22" value="no">
+  <label for="pregunta22_no">No</label>
+  <input type="radio" id="pregunta22_np/nv" name="pregunta22" value="np/nv">
+  <label for="pregunta22_np/nv">NP/NV</label><br>
+  <label for="subpregunta22_paciente">Especifique cual:</label>
+  <input type="text" id="subpregunta22_paciente" name="subpregunta22_paciente"><br>
+  <br>
+  <label for="pregunta23">¿El médico ha indicado una Adecuación del Esfuerzo terapéutico? </label><br>
+  <input type="radio" id="pregunta23_si" name="pregunta23" value="si">
+  <label for="pregunta23_si">Sí</label>
+  <input type="radio" id="pregunta23_no" name="pregunta23" value="no">
+  <label for="pregunta23_no">No</label>
+  <input type="radio" id="pregunta23_np/nv" name="pregunta23" value="np/nv">
+  <label for="pregunta23_np/nv">NP/NV</label><br>
+  <label for="subpregunta23_paciente">Especifique cual:</label>
+  <input type="text" id="subpregunta23_paciente" name="subpregunta23_paciente"><br>
+  <br>
+  <label for="pregunta24">¿Se ha entregado al familiar o cuidador/a el documento informativo? </label><br>
+  <input type="radio" id="pregunta24_si" name="pregunta24" value="si">
+  <label for="pregunta24_si">Sí</label>
+  <input type="radio" id="pregunta24_no" name="pregunta24" value="no">
+  <label for="pregunta24_no">No</label>
+  <input type="radio" id="pregunta24_np/nv" name="pregunta24" value="np/nv">
+  <label for="pregunta24_np/nv">NP/NV</label><br>
+  <button type="button" onclick="mostrarSiguiente('botonEnviar')">Siguiente</button>
+  <button type="button" onclick="mostrarAnterior('botonEnviar')">Atrás</button>
+</div>
+
+
+     <button type="submit" id="botonEnviar" style="display: none " onclick="window.location.href = 'A2.html';">Enviar Respuestas</button>
+      </form>
+
+      <script>
+        function mostrarSiguiente(idPreguntaActual) {
+            var preguntaActual = document.getElementById(idPreguntaActual);
+            var siguientePregunta = preguntaActual.nextElementSibling;
+            
+            preguntaActual.style.display = "none";
+            if (siguientePregunta && siguientePregunta.id !== "botonEnviar") {
+                siguientePregunta.style.display = "block";
+            } else {
+                document.getElementById("botonEnviar").style.display = "block";
+            }
+        }
+        function mostrarAnterior(idPreguntaActual) {
+            var preguntaActual = document.getElementById(idPreguntaActual);
+            var preguntaAnterior = preguntaActual.previousElementSibling;
+
+            preguntaActual.style.display = "none";
+            if (preguntaAnterior) {
+                preguntaAnterior.style.display = "block";
+            }
+        }
+    </script>
+ <script>
+  // Función para redirigir a la página del cuestionario
+  function iniciarCuestionario() {
+      window.location.href = "Cuest.html";
+  }
+</script>
+
+</body>
+</html>

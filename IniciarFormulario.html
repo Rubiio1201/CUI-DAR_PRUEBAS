@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Cuestionario</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(90deg, #16A085, #F4D03F);
+        }
+        .container { 
+            text-align: center;
+        }
+        .container button {
+            padding: 20px 40px;
+            font-size: 18px;
+            background-color: #88f96c;
+            color: #090a0a;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .container button:hover {
+            background-color: #6ef462;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="iniciarCuestionario()" style="background: linear-gradient(90deg, #ADA996, #F2F2F2, #DBDBDB, #EAEAEA); background-color: #000000; font-size: 30px;">Iniciar cuestionario</button>
+    </div>
+
+    <script>
+        // Función para redirigir a la página del cuestionario
+        function iniciarCuestionario() {
+            window.location.href = "Cuestionario.html";
+        }
+    </script>
+</body>
+</html>

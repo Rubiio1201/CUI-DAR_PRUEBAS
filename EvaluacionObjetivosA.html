@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación </title>
+    <style>
+      /* Estilos CSS */
+      body {
+          font-family: Arial, sans-serif;
+          background: linear-gradient(90deg, #16A085, #F4D03F);
+      }
+    
+        .objetivo {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Añadir Objetivo</h2>
+    <div id="objetivoContainer"></div>
+    <button onclick="añadirObjetivo()">Añadir Objetivo</button>
+    <button type="button" id="botonVolver" onclick="window.location.href = 'A3.3.html';">Atrás</button>
+    <button type="button" id="botonEnviar" onclick="window.location.href = 'EvaluacionContinuaB1.html';">Siguiente</button>
+
+
+    <script>
+        let contadorObjetivos = 1;
+
+        function añadirObjetivo() {
+            const objetivoContainer = document.getElementById('objetivoContainer');
+
+            const objetivoDiv = document.createElement('div');
+            objetivoDiv.classList.add('objetivo');
+            objetivoDiv.id = `objetivo${contadorObjetivos}`;
+            objetivoDiv.innerHTML = `
+                <h3>Objetivo ${contadorObjetivos}:</h3>
+                <label for="fecha${contadorObjetivos}">Fecha:</label><br>
+                <input type="date" id="fecha${contadorObjetivos}" name="fecha${contadorObjetivos}"><br>
+                <label for="hora${contadorObjetivos}">Hora:</label><br>
+                <input type="time" id="hora${contadorObjetivos}" name="hora${contadorObjetivos}"><br>
+                <label for="profesional${contadorObjetivos}">Profesional:</label><br>
+                <input type="text" id="profesional${contadorObjetivos}" name="profesional${contadorObjetivos}"><br>
+                <label for="causa${contadorObjetivos}">¿Cuál es la causa del incumplimiento?</label><br>
+                <textarea id="causa${contadorObjetivos}" name="causa${contadorObjetivos}" rows="4"></textarea><br>
+                <label for="abordado${contadorObjetivos}">¿Cómo se ha abordado? ¿Cuál ha sido la intervención?</label><br>
+                <textarea id="abordado${contadorObjetivos}" name="abordado${contadorObjetivos}" rows="4"></textarea><br>
+                <label for="solucionado${contadorObjetivos}">¿Se ha solucionado?</label><br>
+                <textarea id="solucionado${contadorObjetivos}" name="solucionado${contadorObjetivos}" rows="4"></textarea><br>
+                <button onclick="borrarObjetivo(${contadorObjetivos})">Borrar objetivo</button>
+            `;
+            objetivoContainer.appendChild(objetivoDiv);
+            contadorObjetivos++;
+        }
+        function borrarObjetivo(numeroObjetivo) {
+            const objetivoAEliminar = document.getElementById(`objetivo${numeroObjetivo}`);
+            objetivoAEliminar.remove();
+        }
+    </script>
+</body>
+</html>
+
+      
+ 

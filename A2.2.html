@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIGIENE PERSONAL </title>
+    <style>
+      /* Estilos CSS */
+      body {
+          font-family: Arial, sans-serif;
+          background: linear-gradient(90deg, #16A085, #F4D03F);
+      }
+      
+      </style>
+    
+</head>
+<body>
+    <h2>Higiene personal</h2>
+    <form id="formulario">
+        <div id="pregunta1" class="pregunta">
+            <label for="pregunta1">¿Se ha adaptado la higiene personal al confort del paciente?</label><br>
+            <input type="radio" id="pregunta1_si" name="pregunta1" value="si">
+            <label for="pregunta1_si">Sí</label>
+            <input type="radio" id="pregunta1_no" name="pregunta1" value="no">
+            <label for="pregunta1_no">No</label>
+            <input type="radio" id="pregunta1_np/nv" name="pregunta1" value="np/nv">
+            <label for="pregunta1_np/nv">NP/NV</label><br>
+            <br>
+           
+           
+
+            <br>
+            <button type="button" onclick="mostrarSiguiente('pregunta1')">Siguiente</button>
+        </div>
+
+</div>
+
+
+            <script>
+                function mostrarSiguiente(idPreguntaActual) {
+            var preguntaActual = document.getElementById(idPreguntaActual);
+            var siguientePregunta = preguntaActual.nextElementSibling;
+            
+            
+        }
+        function mostrarAnterior(idPreguntaActual) {
+            var preguntaActual = document.getElementById(idPreguntaActual);
+            var preguntaAnterior = preguntaActual.previousElementSibling;
+
+            preguntaActual.style.display = "none";
+            if (preguntaAnterior) {
+                preguntaAnterior.style.display = "block";
+            }
+        }
+
+            </script>
+            </body>
+            </html>
+            
+
+  

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Iniciar Sesión</title>
+        <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 10px;
+            /* Corrección */
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            position: relative; /* Hacer que la posición sea relativa para que la imagen se posicione en relación con este contenedor */
+            text-align: center;
+            width: 400px;
+            padding: 70px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgb(94, 214, 104);
+        }
+
+        .login-container h2 {
+            margin-bottom: 60px;
+            color: #5cee74;
+        }
+
+        .login-container form div {
+            margin-bottom: 50px;
+        }
+
+        .login-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+        }
+
+        .login-container button {
+            font-family: 'Acme', cursive;
+            background-color: #83df88;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+        .login-image {
+            position: absolute;
+            top: 30px; /* Posición inicial */
+            right: 90px; /* Ajuste a la derecha */
+            width: 150px;
+        
+        
+    }
+    </style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ADLaM+Display&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=AR+One+Sans&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aboreto&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abyssinica+SIL&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Advent+Pro&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Adamina&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Afacad&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Agbalumo&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Agdasima&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aguafina+Script&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Akatab&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Akaya+Kanadaka&display=swap">
+    </head>
+    <body style="background: linear-gradient(90deg, #16A085, #F4D03F);">
+        <div class="login-container text-success" style="background: linear-gradient(90deg, #159957, #155799); font-weight: inherit;">
+            <h1 class="text-success" style="color: #080907; font-family: 'Acme', cursive; font-size: 60px;">CUI-DAR</h1>
+            <form id="loginForm" action="/login" method="post">
+                
+                <div>
+                    <label for="username" style="font-size: 25px;">Usuario:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div>
+                    <br><label for="password" style="font-size: 25px;">Contraseña:</label>
+                    <input type="password" id="password" name="password" required><br>
+                </div>
+                <br><button type="submit" style="color: #090a0a; background-color: #4bd809; background: linear-gradient(90deg, #DCE35B, #45B649);">Iniciar Sesión</button>
+            </form>
+            <img src="LOGGGG.png" alt="ImagenInicio" class="login-image">
+        </div>
+        <script>
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Verificar las credenciales
+            if (username === "administrador" && password === "administrador") {
+                // Redirigir a otra página HTML
+                window.location.href = "IniciarFormulario.html";
+            }
+
+            // Evitar que se envíe el formulario
+            event.preventDefault();
+        });
+    </script>
+    </body>
+</html>

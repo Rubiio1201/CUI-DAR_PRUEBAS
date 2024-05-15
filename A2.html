@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2</title>
+    <style>
+      /* Estilos CSS */
+      body {
+          font-family: Arial, sans-serif;
+          background: linear-gradient(90deg, #16A085, #F4D03F);
+      }
+      
+      </style>
+    
+</head>
+<body>
+
+<h2>Control de síntomas, cuidados medicación e intervenciones</h2>
+
+<form id="formulario">
+    <p>Si presenta dolor, especificar EVN 0-10</p>
+    <label>
+        <input type="radio" name="respuesta" value="si" onclick="mostrarPreguntas()"> Sí
+    </label>
+    <label>
+        <input type="radio" name="respuesta" value="no" onclick="redirigir()"> No
+    </label>
+
+    <div id="preguntas" style="display: none;">
+        <h3>Responde del 0 al 10:</h3>
+      
+        <label for="pregunta1">Disnea:</label>
+        <input type="number" id="pregunta1" min="0" max="10"><br>
+        <br>
+        <label for="pregunta2">Náuseas:</label>
+        <input type="number" id="pregunta2" min="0" max="10"><br>
+        <br>
+        <label for="pregunta2">Vómitos:</label>
+        <input type="number" id="pregunta3" min="0" max="10"><br>
+        <br>
+        <label for="pregunta2">Estreñimiento:</label>
+        <input type="number" id="pregunta4" min="0" max="10"><br>
+        <br>
+        <label for="pregunta2">Diarrea:</label>
+        <input type="number" id="pregunta5" min="0" max="10"><br>
+        <br>
+        <label for="pregunta2">Síndrome constitucional:</label>
+        <input type="number" id="pregunta6" min="0" max="10"><br>
+        <br>
+        <label for="pregunta2">Estertores:</label>
+        <input type="number" id="pregunta7" min="0" max="10"><br>
+        <br>
+        <label for="pregunta2">Agitación, nerviosismo:</label>
+        <input type="number" id="pregunta8" min="0" max="10"><br>
+        <br>
+        <label for="pregunta2">Delirium:</label>
+        <input type="number" id="pregunta9" min="0" max="10"><br>
+        <br>
+        
+        <!-- Añade más preguntas según sea necesario -->
+
+    </div>
+</form>
+<script>
+        function mostrarPreguntas() {
+        document.getElementById("preguntas").style.display = "block";
+    }
+
+</script>
+
+</body>
+</html>

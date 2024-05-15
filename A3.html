@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación </title>
+    <style>
+      /* Estilos CSS */
+      body {
+          font-family: Arial, sans-serif;
+          background: linear-gradient(90deg, #16A085, #F4D03F);
+      }
+
+      
+      </style>
+    
+</head>
+<body>
+    <h2>Se integra la ATENCIÓN PSICOLÓGICA en el Plan de Atención del paciente y la familia</h2>
+    <form id="formulario">
+        <div id="pregunta1" class="pregunta">
+            <label for="encabezado">¿Se abordan las necesidades emocionales del paciente?</label>
+            <label for="pregunta1">¿El paciente presenta miedo?</label><br>
+            <input type="radio" id="pregunta1_si" name="pregunta1" value="si">
+            <label for="pregunta1_si">Sí</label>
+            <input type="radio" id="pregunta1_no" name="pregunta1" value="no">
+            <label for="pregunta1_no">No</label>
+            <input type="radio" id="pregunta1_np/nv" name="pregunta1" value="np/nv">
+            <label for="pregunta1_np/nv">NP/NV</label><br>
+            <br>
+            <label for="pregunta2">¿El paciente presenta nerviosismo/ansiedad?</label><br>
+            <input type="radio" id="pregunta2_si" name="pregunta2" value="si">
+            <label for="pregunta2_si">Sí</label>
+            <input type="radio" id="pregunta2_no" name="pregunta2" value="no">
+            <label for="pregunta2_no">No</label>
+            <input type="radio" id="pregunta2_np/nv" name="pregunta2" value="np/nv">
+            <label for="pregunta2_np/nv">NP/NV</label><br>
+            <br>
+            <label for="pregunta3">¿El paciente presenta tristeza/depresión?</label><br>
+            <input type="radio" id="pregunta3_si" name="pregunta3" value="si">
+            <label for="pregunta1_si">Sí</label>
+            <input type="radio" id="pregunta3_no" name="pregunta3" value="no">
+            <label for="pregunta3_no">No</label>
+            <input type="radio" id="pregunta3_np/nv" name="pregunta3" value="np/nv">
+            <label for="pregunta3_np/nv">NP/NV</label><br>
+            <br>
+            <label for="pregunta4">¿El paciente presenta otra sintomatología emocional?</label><br>
+            <input type="radio" id="pregunta4_si" name="pregunta4" value="si">
+            <label for="pregunta4_si">Sí</label>
+            <input type="radio" id="pregunta4_no" name="pregunta4" value="no">
+            <label for="pregunta4_no">No</label>
+            <input type="radio" id="pregunta4_np/nv" name="pregunta4" value="np/nv">
+            <label for="pregunta4_np/nv">NP/NV</label>
+            <br>
+            <label for="pregunta4">Especifique:</label>
+            <input type="text" id="pregunta4" name="pregunta4"><br>
+            <br>
+            <label for="pregunta5">¿Existe psicopatología previa o actual en el paciente?</label><br>
+            <input type="radio" id="pregunta5_si" name="pregunta5" value="si">
+            <label for="pregunta5_si">Sí</label>
+            <input type="radio" id="pregunta5_no" name="pregunta5" value="no">
+            <label for="pregunta5_no">No</label>
+            <input type="radio" id="pregunta5_np/nv" name="pregunta5" value="np/nv">
+            <label for="pregunta5_np/nv">NP/NV</label>
+            <br>
+            <label for="pregunta5">Especifique:</label>
+            <input type="text" id="pregunta5" name="pregunta5"><br>
+            <br>
+            <button type="button" onclick="mostrarSiguiente('pregunta1', 'pregunta2')">Siguiente</button>
+        </div>
+    <div id="pregunta2" class="pregunta" style="display: none;">
+    <label for="pregunta6">¿Es necesaria la valoración del paciente por Psicología del EID?</label><br>
+    <input type="radio" id="pregunta6_si" name="pregunta6" value="si">
+    <label for="pregunta6_si">Sí</label>
+    <input type="radio" id="pregunta6_no" name="pregunta6" value="no">
+    <label for="pregunta6_no">No</label>
+    <input type="radio" id="pregunta6_np/nv" name="pregunta6" value="np/nv">
+    <label for="pregunta6_np/nv">NP/NV</label>
+    <button type="button" onclick="mostrarAnterior('pregunta2', 'pregunta1')">Atrás</button>
+    <button type="button" onclick="mostrarSiguiente('pregunta2', 'pregunta3')">Siguiente</button>
+</div>
+
+<div id="pregunta3" class="pregunta" style="display: none;">
+    <label for="encabezado">¿Se abordan las necesidades emocionales de los familiares/cuidadores?</label>
+    <label for="pregunta7">¿El familiar/cuidador presenta miedo?</label><br>
+    <input type="radio" id="pregunta7_si" name="pregunta7" value="si">
+    <label for="pregunta7_si">Sí</label>
+    <input type="radio" id="pregunta7_no" name="pregunta7" value="no">
+    <label for="pregunta7_no">No</label>
+    <input type="radio" id="pregunta7_np/nv" name="pregunta7" value="np/nv">
+    <label for="pregunta7_np/nv">NP/NV</label><br>
+    <br>
+    <label for="pregunta8">¿El familiar/cuidador presenta nerviosismo/ansiedad?</label><br>
+    <input type="radio" id="pregunta8_si" name="pregunta8" value="si">
+    <label for="pregunta8_si">Sí</label>
+    <input type="radio" id="pregunta8_no" name="pregunta8" value="no">
+    <label for="pregunta8_no">No</label>
+    <input type="radio" id="pregunta8_np/nv" name="pregunta8" value="np/nv">
+    <label for="pregunta8_np/nv">NP/NV</label><br>
+    <br>
+    <label for="pregunta9">¿El familiar/cuidador presenta tristeza/depresión?</label><br>
+    <input type="radio" id="pregunta9_si" name="pregunta9" value="si">
+    <label for="pregunta9_si">Sí</label>
+    <input type="radio" id="pregunta9_no" name="pregunta9" value="no">
+    <label for="pregunta9_no">No</label>
+    <input type="radio" id="pregunta9_np/nv" name="pregunta9" value="np/nv">
+    <label for="pregunta9_np/nv">NP/NV</label><br>
+    <br>
+    <label for="pregunta10">¿El familiar/cuidador presenta otra sintomatología emocional?</label><br>
+    <input type="radio" id="pregunta10_si" name="pregunta10" value="si">
+    <label for="pregunta10_si">Sí</label>
+    <input type="radio" id="pregunta10_no" name="pregunta10" value="no">
+    <label for="pregunta10_no">No</label>
+    <input type="radio" id="pregunta10_np/nv" name="pregunta10" value="np/nv">
+    <label for="pregunta10_np/nv">NP/NV</label>
+    <br>
+    <label for="pregunta10">Especifique:</label>
+    <input type="text" id="pregunta10" name="pregunta10"><br>
+    <br>
+    <label for="pregunta11">¿El familiar/cuidador presenta otra sintomatología emocional?</label><br>
+    <input type="radio" id="pregunta11_si" name="pregunta11" value="si">
+    <label for="pregunta11_si">Sí</label>
+    <input type="radio" id="pregunta11_no" name="pregunta11" value="no">
+    <label for="pregunta11_no">No</label>
+    <input type="radio" id="pregunta11_np/nv" name="pregunta11" value="np/nv">
+    <label for="pregunta11_np/nv">NP/NV</label>
+    <br>
+    <label for="pregunta11">Especifique:</label>
+    <input type="text" id="pregunta11" name="pregunta11"><br>
+    <br>
+    <label for="pregunta12">¿Existe psicopatología previa o actual en el familiar/cuidador que pueda dificultar el afrontamiento de la enfermedad en relación con el tratamiento y/o cuidados?</label><br>
+    <input type="radio" id="pregunta12_si" name="pregunta12" value="si">
+    <label for="pregunta12_si">Sí</label>
+    <input type="radio" id="pregunta12_no" name="pregunta12" value="no">
+    <label for="pregunta12_no">No</label>
+    <input type="radio" id="pregunta12_np/nv" name="pregunta12" value="np/nv">
+    <label for="pregunta12_np/nv">NP/NV</label><br>
+    <br>
+    <label for="pregunta13">En caso afirmativo, ¿Está o ha estado en tratamiento?</label><br>
+    <input type="radio" id="pregunta13_si" name="pregunta13" value="si">
+    <label for="pregunta13_si">Sí</label>
+    <input type="radio" id="pregunta13_no" name="pregunta13" value="no">
+    <label for="pregunta13_no">No</label>
+    <input type="radio" id="pregunta13_np/nv" name="pregunta13" value="np/nv">
+    <label for="pregunta13_np/nv">NP/NV</label><br>
+    <br>
+    <button type="button" id="botonEnviar" onclick="window.location.href = 'A3.2.html';">Siguiente</button>
+    <button type="button" onclick="mostrarAnterior('pregunta3', 'pregunta2')">Atrás</button>
+</div>
+
+</form>
+
+
+<script>
+
+function mostrarSiguiente(actual, siguiente) {
+            document.getElementById(actual).style.display = "none";
+            document.getElementById(siguiente).style.display = "block";
+        }
+
+        function mostrarAnterior(actual, anterior) {
+            document.getElementById(actual).style.display = "none";
+            document.getElementById(anterior).style.display = "block";
+        }
+</script>
+            </body>
+            </html>
+            
+
+  

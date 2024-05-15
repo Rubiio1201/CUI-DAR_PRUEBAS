@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 10px; /* Corrección */
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            text-align: center;
+            width: 300px;
+            padding: 70px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgb(94, 214, 104);
+        }
+        .login-container h2 {
+            margin-bottom: 60px;
+            color: #5cee74;
+        }
+        .login-container form div {
+            margin-bottom: 50px;
+        }
+        .login-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+        }
+        .login-container button {
+            width: 50%;
+            padding: 20px;
+            background-color: #83df88;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>CUI-DAR</h2>
+        <form id="loginForm" action="/login" method="post">
+            <div>
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            // Verificar las credenciales
+            if (username === "administrador" && password === "administrador") {
+                // Redirigir a otra página HTML
+                window.location.href = "IniciarFormulario.html";
+            }
+            
+            // Evitar que se envíe el formulario
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Evaluación</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(90deg, #16A085, #F4D03F);
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="date"],
+        input[type="time"],
+        input[type="text"],
+        input[type="submit"],
+        .back-button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"],
+        .back-button {
+            background-color: #007bff;
+            color: #fff;
+        }
+        input[type="submit"]:hover,
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+        .back-button {
+            background-color: #dc3545;
+        }
+        .back-button:hover {
+            background-color: #bb2d3b;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Registro de Evaluación</h1>
+
+<div class="container">
+    <div id="registro">
+        <!-- Aquí se mostrará el formulario de evaluación si corresponde -->
+    </div>
+</div>
+
+<script>
+    function mostrarFormularioEvaluacion() {
+        const registro = document.getElementById('registro');
+        const fechaUltimaEvaluacion = localStorage.getItem('fechaUltimaEvaluacion');
+
+        // Si no hay una fecha de última evaluación o han pasado más de 3 días, mostrar el formulario
+        if (!fechaUltimaEvaluacion || hanPasadoTresDias(new Date(fechaUltimaEvaluacion))) {
+            const formulario = `
+                <form id="formularioEvaluacion" class="container">
+                    <label for="fecha">Fecha de Evaluación:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                    
+                    <label for="hora">Hora de Evaluación:</label>
+                    <input type="time" id="hora" name="hora" required>
+                    
+                    <button type="submit">Guardar</button>
+                </form>
+            `;
+            registro.innerHTML = formulario;
+
+            const formularioEvaluacion = document.getElementById('formularioEvaluacion');
+            formularioEvaluacion.addEventListener('submit', function(event) {
+                event.preventDefault(); // Evitar el envío del formulario
+                const fechaEvaluacion = document.getElementById('fecha').value;
+                const horaEvaluacion = document.getElementById('hora').value;
+                guardarFechaEvaluacion(fechaEvaluacion);
+                // Aquí podrías enviar los datos a tu servidor para guardarlos en la base de datos
+                alert('Fecha de evaluación guardada correctamente.');
+                // Limpia el formulario después de guardar los datos
+                formularioEvaluacion.reset();
+                // Redirigir al usuario a la página de diagnóstico
+                window.location.href = 'diagnostico_fam.html';
+            });
+        } else {
+            registro.innerHTML = '<p>Aún no puedes añadir una nueva evaluación. Debes esperar tres días desde la última evaluación.</p>';
+        }
+    }
+
+    function hanPasadoTresDias(fechaUltimaEvaluacion) {
+        const tresDiasEnMS = 3 * 24 * 60 * 60 * 1000; // 3 días en milisegundos
+        const fechaActual = new Date();
+        return fechaActual - fechaUltimaEvaluacion >= tresDiasEnMS;
+    }
+
+    function guardarFechaEvaluacion(fecha) {
+        localStorage.setItem('fechaUltimaEvaluacion', fecha);
+    }
+
+    // Mostrar el formulario al cargar la página
+    mostrarFormularioEvaluacion();
+</script>
+
+</body>
+</html>

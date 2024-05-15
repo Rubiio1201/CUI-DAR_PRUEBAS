@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Evaluación Médica</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(90deg, #16A085, #F4D03F);
+        }
+        
+        </style>
+</head>
+<body>
+    <h2>Formulario de Evaluación Médica</h2>
+
+    <form id="formulario" onsubmit="return validarFormulario()">
+        <div>
+            <label for="integridad-piel">¿Se evalúa la integridad de la piel del paciente?</label>
+
+            <select id="integridad-piel" onchange="mostrarPuntuacion(this)">
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+            <input type="number" id="puntuacion-piel" name="puntuacion-piel" min="0" max="10" style="display: none;">
+            <label for ="puntuacion-piel"></label>
+        </div>
+
+        <div>
+            <label for="lesiones-presion">¿El paciente tiene lesiones por presión?</label>
+            <select id="lesiones-presion" onchange="mostrarPuntuacion(this)">
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+            <input type="number" id="puntuacion-lesiones" name="puntuacion-lesiones" min="0" max="10" style="display: none;"><br>
+        </div>
+        <div id="pregunta1" class="pregunta">
+            
+            <label for="pregunta2">¿Se valora el uso de control antiescaras?</label><br>
+            <input type="radio" id="pregunta2_si" name="pregunta2" value="si">
+            <label for="pregunta2_si">Sí</label>
+            <input type="radio" id="pregunta2_no" name="pregunta2" value="no">
+            <label for="pregunta2_no">No</label>
+            <input type="radio" id="pregunta2_np/nv" name="pregunta2" value="np/nv">
+            <label for="pregunta2_np/nv">NP/NV</label><br>
+            <br>
+            <label for="pregunta3"> ¿Se valora la necesidad de realizar cambios posturales?</label><br>
+            <input type="radio" id="pregunta3_si" name="pregunta3" value="si">
+            <label for="pregunta1_si">Sí</label>
+            <input type="radio" id="pregunta3_no" name="pregunta3" value="no">
+            <label for="pregunta3_no">No</label>
+            <input type="radio" id="pregunta3_np/nv" name="pregunta3" value="np/nv">
+            <label for="pregunta3_np/nv">NP/NV</label><br>
+            <br>
+
+        </div>
+        <div>
+            <label for="lesiones-presion">¿El paciente tiene otras alteraciones de la piel?</label>
+            <select id="lesiones-presion" onchange="mostrarPuntuacion(this)">
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+            <input type="number" id="puntuacion-lesiones" name="puntuacion-lesiones" min="0" max="10" style="display: none;"><br>
+        </div>
+
+        <button type="submit">Siguiente</button>
+    </form>
+
+    <script>
+        function mostrarPuntuacion(select) {
+            var puntuacionInput = select.nextElementSibling;
+            if (select.value === "si") {
+                puntuacionInput.style.display = "inline";
+            } else {
+                puntuacionInput.style.display = "none";
+            }
+        }
+
+      
+    </script>
+</body>
+</html>

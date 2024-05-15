@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunicación del Paciente</title>
+    <style>
+      /* Estilos CSS */
+      body {
+          font-family: Arial, sans-serif;
+          background: linear-gradient(90deg, #16A085, #F4D03F);
+      }
+      .pregunta {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        select, input[type="submit"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+      
+      </style>
+    
+</head>
+<body>
+    <h2>En el momento de la evaluación el paciente presenta</h2>
+    <div class="pregunta">
+        <h3>Dolor</h3>
+        <form action="">
+            <label for="horarios">Horarios de registro:</label>
+            <div id="horarios">
+                <label for="hora09">09:00</label>
+                <select name="hora09" id="hora09">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+                <br>
+                <label for="hora13">13:00</label>
+                <select name="hora13" id="hora13">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+                <br>
+                <label for="hora17">17:00</label>
+                <select name="hora17" id="hora17">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+                <br>
+                <label for="hora21">21:00</label>
+                <select name="hora21" id="hora21">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+                <br>
+                <label for="hora01">01:00</label>
+                <select name="hora01" id="hora01">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+                <br>
+                <label for="hora05">05:00</label>
+                <select name="hora05" id="hora05">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <input type="submit" value="Guardar">
+        </form>
+    </div>
+    <div class="pregunta">
+        <h3>Disnea</h3>
+        <form action="">
+            <label for="horarios">Horarios de registro:</label>
+            <div id="horarios">
+                <label for="hora09">09:00</label>
+                <select name="hora09" id="hora09">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+                <br>
+                <label for="hora13">13:00</label>
+                <select name="hora13" id="hora13">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+                <br>
+                <label for="hora17">17:00</label>
+                <select name="hora17" id="hora17">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+                <br>
+                <label for="hora21">21:00</label>
+                <select name="hora21" id="hora21">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+                <br>
+                <label for="hora01">01:00</label>
+                <select name="hora01" id="hora01">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+                <br>
+                <label for="hora05">05:00</label>
+                <select name="hora05" id="hora05">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <input type="submit" value="Guardar">
+        </form>
+        </div>
+        <div class="pregunta">
+            <h3>Naúseas</h3>
+            <form action="">
+                <label for="horarios">Horarios de registro:</label>
+                <div id="horarios">
+                    <label for="hora09">09:00</label>
+                    <select name="hora09" id="hora09">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                    <br>
+                    <label for="hora13">13:00</label>
+                    <select name="hora13" id="hora13">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                    <br>
+                    <label for="hora17">17:00</label>
+                    <select name="hora17" id="hora17">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                    <br>
+                    <label for="hora21">21:00</label>
+                    <select name="hora21" id="hora21">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                    <br>
+                    <label for="hora01">01:00</label>
+                    <select name="hora01" id="hora01">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                    <br>
+                    <label for="hora05">05:00</label>
+                    <select name="hora05" id="hora05">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <input type="submit" value="Guardar">
+            </form>
+            </div>
+            <div class="pregunta">
+                <h3>Vómitos</h3>
+                <form action="">
+                    <label for="horarios">Horarios de registro:</label>
+                    <div id="horarios">
+                        <label for="hora09">09:00</label>
+                        <select name="hora09" id="hora09">
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
+                        <br>
+                        <label for="hora13">13:00</label>
+                        <select name="hora13" id="hora13">
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
+                        <br>
+                        <label for="hora17">17:00</label>
+                        <select name="hora17" id="hora17">
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
+                        <br>
+                        <label for="hora21">21:00</label>
+                        <select name="hora21" id="hora21">
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
+                        <br>
+                        <label for="hora01">01:00</label>
+                        <select name="hora01" id="hora01">
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
+                        <br>
+                        <label for="hora05">05:00</label>
+                        <select name="hora05" id="hora05">
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <input type="submit" value="Guardar">
+                </form>
+                </div>
+                <div class="pregunta">
+                    <h3>Estertores</h3>
+                    <form action="">
+                        <label for="horarios">Horarios de registro:</label>
+                        <div id="horarios">
+                            <label for="hora09">09:00</label>
+                            <select name="hora09" id="hora09">
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                            <br>
+                            <label for="hora13">13:00</label>
+                            <select name="hora13" id="hora13">
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                            <br>
+                            <label for="hora17">17:00</label>
+                            <select name="hora17" id="hora17">
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                            <br>
+                            <label for="hora21">21:00</label>
+                            <select name="hora21" id="hora21">
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                            <br>
+                            <label for="hora01">01:00</label>
+                            <select name="hora01" id="hora01">
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                            <br>
+                            <label for="hora05">05:00</label>
+                            <select name="hora05" id="hora05">
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <input type="submit" value="Guardar">
+                    </form>
+                    </div>
+                    <div class="pregunta">
+                        <h3>Delirium</h3>
+                        <form action="">
+                            <label for="horarios">Horarios de registro:</label>
+                            <div id="horarios">
+                                <label for="hora09">09:00</label>
+                                <select name="hora09" id="hora09">
+                                    <option value="si">Sí</option>
+                                    <option value="no">No</option>
+                                </select>
+                                <br>
+                                <label for="hora13">13:00</label>
+                                <select name="hora13" id="hora13">
+                                    <option value="si">Sí</option>
+                                    <option value="no">No</option>
+                                </select>
+                                <br>
+                                <label for="hora17">17:00</label>
+                                <select name="hora17" id="hora17">
+                                    <option value="si">Sí</option>
+                                    <option value="no">No</option>
+                                </select>
+                                <br>
+                                <label for="hora21">21:00</label>
+                                <select name="hora21" id="hora21">
+                                    <option value="si">Sí</option>
+                                    <option value="no">No</option>
+                                </select>
+                                <br>
+                                <label for="hora01">01:00</label>
+                                <select name="hora01" id="hora01">
+                                    <option value="si">Sí</option>
+                                    <option value="no">No</option>
+                                </select>
+                                <br>
+                                <label for="hora05">05:00</label>
+                                <select name="hora05" id="hora05">
+                                    <option value="si">Sí</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                            <input type="submit" value="Guardar">
+                        </form>
+                        </div>
+                        <div class="pregunta">
+                            <h3>Fiebre</h3>
+                            <form action="">
+                                <label for="horarios">Horarios de registro:</label>
+                                <div id="horarios">
+                                    <label for="hora09">09:00</label>
+                                    <select name="hora09" id="hora09">
+                                        <option value="si">Sí</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                    <br>
+                                    <label for="hora13">13:00</label>
+                                    <select name="hora13" id="hora13">
+                                        <option value="si">Sí</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                    <br>
+                                    <label for="hora17">17:00</label>
+                                    <select name="hora17" id="hora17">
+                                        <option value="si">Sí</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                    <br>
+                                    <label for="hora21">21:00</label>
+                                    <select name="hora21" id="hora21">
+                                        <option value="si">Sí</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                    <br>
+                                    <label for="hora01">01:00</label>
+                                    <select name="hora01" id="hora01">
+                                        <option value="si">Sí</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                    <br>
+                                    <label for="hora05">05:00</label>
+                                    <select name="hora05" id="hora05">
+                                        <option value="si">Sí</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                </div>
+                                <input type="submit" value="Guardar">
+                            </form>
+                            </div>
+                            <div class="pregunta">
+                                <h3>Convulsiones</h3>
+                                <form action="">
+                                    <label for="horarios">Horarios de registro:</label>
+                                    <div id="horarios">
+                                        <label for="hora09">09:00</label>
+                                        <select name="hora09" id="hora09">
+                                            <option value="si">Sí</option>
+                                            <option value="no">No</option>
+                                        </select>
+                                        <br>
+                                        <label for="hora13">13:00</label>
+                                        <select name="hora13" id="hora13">
+                                            <option value="si">Sí</option>
+                                            <option value="no">No</option>
+                                        </select>
+                                        <br>
+                                        <label for="hora17">17:00</label>
+                                        <select name="hora17" id="hora17">
+                                            <option value="si">Sí</option>
+                                            <option value="no">No</option>
+                                        </select>
+                                        <br>
+                                        <label for="hora21">21:00</label>
+                                        <select name="hora21" id="hora21">
+                                            <option value="si">Sí</option>
+                                            <option value="no">No</option>
+                                        </select>
+                                        <br>
+                                        <label for="hora01">01:00</label>
+                                        <select name="hora01" id="hora01">
+                                            <option value="si">Sí</option>
+                                            <option value="no">No</option>
+                                        </select>
+                                        <br>
+                                        <label for="hora05">05:00</label>
+                                        <select name="hora05" id="hora05">
+                                            <option value="si">Sí</option>
+                                            <option value="no">No</option>
+                                        </select>
+                                    </div>
+                                    <input type="submit" value="Guardar">
+                                </form>
+                                <div class="pregunta">
+                                    <h3>Agitación,Nerviosismo</h3>
+                                    <form action="">
+                                        <label for="horarios">Horarios de registro:</label>
+                                        <div id="horarios">
+                                            <label for="hora09">09:00</label>
+                                            <select name="hora09" id="hora09">
+                                                <option value="si">Sí</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                            <br>
+                                            <label for="hora13">13:00</label>
+                                            <select name="hora13" id="hora13">
+                                                <option value="si">Sí</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                            <br>
+                                            <label for="hora17">17:00</label>
+                                            <select name="hora17" id="hora17">
+                                                <option value="si">Sí</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                            <br>
+                                            <label for="hora21">21:00</label>
+                                            <select name="hora21" id="hora21">
+                                                <option value="si">Sí</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                            <br>
+                                            <label for="hora01">01:00</label>
+                                            <select name="hora01" id="hora01">
+                                                <option value="si">Sí</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                            <br>
+                                            <label for="hora05">05:00</label>
+                                            <select name="hora05" id="hora05">
+                                                <option value="si">Sí</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                        </div>
+                                        <input type="submit" value="Guardar">
+                                    </form>
+                                    </div>
+                                    <div class="pregunta">
+                                        <h3>Otro síntoma</h3>
+                                        <input type="text" id="pregunta" name="pregunta"><br>
+                                        <br>
+                                        <form action="">
+                                            <label for="horarios">Horarios de registro:</label>
+                                            <div id="horarios">
+                                                <label for="hora09">09:00</label>
+                                                <select name="hora09" id="hora09">
+                                                    <option value="si">Sí</option>
+                                                    <option value="no">No</option>
+                                                </select>
+                                                <br>
+                                                <label for="hora13">13:00</label>
+                                                <select name="hora13" id="hora13">
+                                                    <option value="si">Sí</option>
+                                                    <option value="no">No</option>
+                                                </select>
+                                                <br>
+                                                <label for="hora17">17:00</label>
+                                                <select name="hora17" id="hora17">
+                                                    <option value="si">Sí</option>
+                                                    <option value="no">No</option>
+                                                </select>
+                                                <br>
+                                                <label for="hora21">21:00</label>
+                                                <select name="hora21" id="hora21">
+                                                    <option value="si">Sí</option>
+                                                    <option value="no">No</option>
+                                                </select>
+                                                <br>
+                                                <label for="hora01">01:00</label>
+                                                <select name="hora01" id="hora01">
+                                                    <option value="si">Sí</option>
+                                                    <option value="no">No</option>
+                                                </select>
+                                                <br>
+                                                <label for="hora05">05:00</label>
+                                                <select name="hora05" id="hora05">
+                                                    <option value="si">Sí</option>
+                                                    <option value="no">No</option>
+                                                </select>
+                                            </div>
+                                            <input type="submit" value="Guardar">
+                                        </form>
+                                        </div>
+                                        </div>
+                                        <button type="button" id="botonEnviar" onclick="window.location.href = 'EvaluacionContinuaB1.html';">Atrás</button>
+                                        <button type="button" id="botonVolver" onclick="window.location.href = 'EvaluacionContinuaB3.html';">Siguiente</button>
+</body>
+</html>

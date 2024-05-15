@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Adicional</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        input[type="text"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #67f583;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #58ef65;
+        }
+        #otrosInput {
+            display: none;
+        }
+    </style>
+</head>
+<body style="background: linear-gradient(90deg, #67B26F, #4ca2cd);">
+    <div class="container" style="background: linear-gradient(90deg, #ADA996, #F2F2F2, #DBDBDB, #EAEAEA);">
+        <h2>Datos del Paciente</h2>
+        <form id="additional-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required="">
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required="">
+            <label for="Nº de Historial">Nº de Historial:</label>
+            <input type="text" id="Nº de Historial" name="Nº de historial" required="">
+            <label>Seleccionar Casilla:</label>
+            <label><input type="radio" name="casilla" value="Hospital" id="hospitalRadio" onclick="mostrarOtroInput()"> Hospital</label>
+            <label><input type="radio" name="casilla" value="Residencia" id="residenciaRadio" onclick="mostrarOtroInput()"> Residencia</label>
+            <label><input type="radio" name="casilla" value="Unidad o Servicio" id="unidadRadio" onclick="mostrarOtroInput()"> Unidad o Servicio</label>
+            <label><input type="radio" name="casilla" value="Otro" id="otroCheckbox" onclick="mostrarOtroInput()"> Otro</label>
+            <input type="text" id="otrosInput" name="otrosInput" placeholder="Especificar lugar de registro">
+            <button type="button" onclick="window.location.href = 'inicioPlan.html';">Enviar</button>
+            <button type="button" onclick="window.location.href = 'IniciarFormulario.html';">Atrás</button>
+        </form>
+    </div>
+
+    <script>
+        // Función para mostrar u ocultar el campo de texto adicional cuando se selecciona/deselecciona "Otro"
+        function mostrarOtroInput() {
+            var otrosInput = document.getElementById("otrosInput");
+            var otroCheckbox = document.getElementById("otroCheckbox");
+
+            if (otroCheckbox.checked) {
+                otrosInput.style.display = "block";
+            } else {
+                otrosInput.style.display = "none";
+            }
+        }
+
+        
+        
+    </script>
+</body>
+</html>

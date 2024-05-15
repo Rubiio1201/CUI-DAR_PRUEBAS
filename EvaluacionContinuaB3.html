@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunicación del Paciente</title>
+    <style>
+      /* Estilos CSS */
+      body {
+          font-family: Arial, sans-serif;
+          background: linear-gradient(90deg, #16A085, #F4D03F);
+      }
+      table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Estado del Nivel de Conciencia</h2>
+    <form action="">
+        <label for="estado">Estado:</label>
+        <select name="estado" id="estado">
+            <option value="consciente">Consciente</option>
+            <option value="estuporoso">Estuporoso</option>
+            <option value="coma">Coma</option>
+        </select>
+        <br>
+        <br>
+        <label for="puntuacion">Puntuación GLASGOW:</label>
+        <select name="puntuacion" id="puntuacion">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+        </select>
+    </form>
+    <button type="button" id="botonEnviar" onclick="window.location.href = 'EvaluacionContinuaB2.html';">Atrás</button>
+    <button type="button" id="botonVolver" onclick="window.location.href = 'EvaluacionContinuaB4.html';">Siguiente</button>
+</body>
+</html>

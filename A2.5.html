@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación </title>
+    <style>
+      /* Estilos CSS */
+      body {
+          font-family: Arial, sans-serif;
+          background: linear-gradient(90deg, #16A085, #F4D03F);
+      }
+
+    
+      </style>
+    
+</head>
+<body>
+    <h2>Cuidados de vías de eliminación</h2>
+    <form id="formulario">
+        <div id="pregunta1" class="pregunta">
+            <label for="encabezado">¿El paciente presenta oliganuria o anuria?</label>
+            <input type="radio" id="pregunta1_si" name="pregunta1" value="si">
+            <label for="pregunta1_si">Sí</label>
+            <input type="radio" id="pregunta1_no" name="pregunta1" value="no">
+            <label for="pregunta1_no">No</label>
+            <input type="radio" id="pregunta1_np/nv" name="pregunta1" value="np/nv">
+            <label for="pregunta1_np/nv">NP/NV</label><br>
+            <br>
+            <label for="pregunta2">¿El paciente presenta globo vesica?</label><br>
+            <input type="radio" id="pregunta2_si" name="pregunta2" value="si">
+            <label for="pregunta2_si">Sí</label>
+            <input type="radio" id="pregunta2_no" name="pregunta2" value="no">
+            <label for="pregunta2_no">No</label>
+            <input type="radio" id="pregunta2_np/nv" name="pregunta2" value="np/nv">
+            <label for="pregunta2_np/nv">NP/NV</label><br>
+            <br>
+            <label for="pregunta3">¿Se realiza?</label><br>
+            <input type="radio" id="pregunta3_si" name="pregunta3" value="si">
+            <label for="pregunta1_si">Sí</label>
+            <input type="radio" id="pregunta3_no" name="pregunta3" value="no">
+            <label for="pregunta3_no">No</label>
+            <input type="radio" id="pregunta3_np/nv" name="pregunta3" value="np/nv">
+            <label for="pregunta3_np/nv">NP/NV</label><br>
+            <br>
+            <label for="pregunta4">¿El portador de sonda vesical previamente?</label><br>
+            <input type="radio" id="pregunta4_si" name="pregunta4" value="si">
+            <label for="pregunta4_si">Sí</label>
+            <input type="radio" id="pregunta4_no" name="pregunta4" value="no">
+            <label for="pregunta4_no">No</label>
+            <input type="radio" id="pregunta4_np/nv" name="pregunta4" value="np/nv">
+            <label for="pregunta4_np/nv">NP/NV</label>
+            <br>
+            <label for="pregunta4">¿El paciente presenta incontinencia urinaria?</label>
+            <input type="radio" id="pregunta4_si" name="pregunta4" value="si">
+            <label for="pregunta4_si">Sí</label>
+            <input type="radio" id="pregunta4_no" name="pregunta4" value="no">
+            <label for="pregunta4_no">No</label>
+            <input type="radio" id="pregunta4_np/nv" name="pregunta4" value="np/nv">
+            <label for="pregunta4_np/nv">NP/NV</label>
+            <br>
+            <label for="pregunta5">¿El paciente presente incontinencia fecal?</label><br>
+            <input type="radio" id="pregunta5_si" name="pregunta5" value="si">
+            <label for="pregunta5_si">Sí</label>
+            <input type="radio" id="pregunta5_no" name="pregunta5" value="no">
+            <label for="pregunta5_no">No</label>
+            <input type="radio" id="pregunta5_np/nv" name="pregunta5" value="np/nv">
+            <label for="pregunta5_np/nv">NP/NV</label>
+            <br>
+            <label for="pregunta5">¿El paciente presente impactación fecal dolorsa?</label><br>
+            <input type="radio" id="pregunta5_si" name="pregunta5" value="si">
+            <label for="pregunta5_si">Sí</label>
+            <input type="radio" id="pregunta5_no" name="pregunta5" value="no">
+            <label for="pregunta5_no">No</label>
+            <input type="radio" id="pregunta5_np/nv" name="pregunta5" value="np/nv">
+            <label for="pregunta5_np/nv">NP/NV</label>
+            <br>
+            <label for="pregunta5">¿El paciente necesita pañales?</label><br>
+            <input type="radio" id="pregunta5_si" name="pregunta5" value="si">
+            <label for="pregunta5_si">Sí</label>
+            <input type="radio" id="pregunta5_no" name="pregunta5" value="no">
+            <label for="pregunta5_no">No</label>
+            <input type="radio" id="pregunta5_np/nv" name="pregunta5" value="np/nv">
+            <label for="pregunta5_np/nv">NP/NV</label>
+            <br>
+            <button type="button" onclick="mostrarSiguiente('pregunta1', 'pregunta2')">Siguiente</button>
+        </div>
+    
+
+</form>
+
+
+<script>
+
+function mostrarSiguiente(actual, siguiente) {
+            document.getElementById(actual).style.display = "none";
+            document.getElementById(siguiente).style.display = "block";
+        }
+
+        function mostrarAnterior(actual, anterior) {
+            document.getElementById(actual).style.display = "none";
+            document.getElementById(anterior).style.display = "block";
+        }
+</script>
+            </body>
+            </html>
+            
+
+  

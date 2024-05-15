@@ -1,0 +1,31 @@
+<html lang="es" style="background: linear-gradient(90deg, #16A085, #F4D03F);">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario Adicional</title>
+        <style>/* Estilos CSS */body { font-family: Arial, sans-serif; backgro<!DOCTYPE html>
+und-color: #f0f0f0; } .container { max-width: 400px; margin: 50px auto; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); } h2 { text-align: center; } input[type="text"], input[type="submit"] { width: 100%; padding: 10px; margin: 10px 0; box-sizing: border-box; } input[type="submit"] { background-color: #007bff; color: #fff; border: none; cursor: pointer; } input[type="submit"]:hover { background-color: #0056b3; } /* Estilos para el botón de atrás */.back-button { background-color: #dc3545; } .back-button:hover { background-color: #bb2d3b; }</style>
+    </head>
+    <body style="background: linear-gradient(90deg, #16A085, #F4D03F);">
+        <div class="container" style="background: linear-gradient(90deg, #ADA996, #F2F2F2, #DBDBDB, #EAEAEA);">
+            <h2>Iniciar plan cuidar</h2>
+            <form id="inicio" onsubmit="return enviarFormulario()">
+                <label for="fechaInicio">Fecha de inicio:</label>
+                <input type="date" id="fechaInicio" name="fechaInicio" required="">
+                <label for="HoraInicio"></label>
+                <label for="HoraInicio">
+                    <p>Hora de Inicio:&nbsp;<input type="time" id="HoraInicio" name="HoraInicio" required="">&nbsp;</p>
+                    <p><label for="personalIn">Personal que inicia:</label> <input type="text" id="personalIn" name="personalIn"> <label for="categoria">Categoría profesional:</label> <input type="text" id="categoria" name="categoria"> <button type="submit">Enviar</button> <button class="back-button" onclick="window.location.href = 'cuestionario.html';" type="button">Atrás</button></p>
+                </label>
+            </form>
+        </div>
+        <script>
+    function enviarFormulario() {
+        // Redireccionar a la página de destino
+        window.location.href = 'prueba_reevaluacion.html';
+        // Devolver false para evitar el envío del formulario
+        return false;
+    }
+</script>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firma de Datos</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsrsasign/10.1.9/jsrsasign-all-min.js"></script>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(90deg, #16A085, #F4D03F);
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <h2>Firma de Datos</h2>
+        <form id="formulario">
+            <label for="nombreProfesional">Nombre del Profesional:</label><br>
+            <input type="text" id="nombreProfesional" name="nombreProfesional" required><br>
+            <label for="fecha">Fecha:</label><br>
+            <input type="date" id="fecha" name="fecha" required><br>
+            <button type="button" onclick="firmar()">Firmar</button><br>
+            <div id="mensajeFirmado" style="display:none;">
+                <label for="firmado">Firmado por:</label><br>
+                <textarea id="firmado" name="firmado" rows="2" cols="50" readonly></textarea><br>
+            </div>
+        </form>
+    
+        <script>
+            function firmar() {
+                var nombreProfesional = document.getElementById('nombreProfesional').value;
+                var fecha = document.getElementById('fecha').value;
+    
+                // Mostrar los datos firmados
+                var mensajeFirmado = "Firmado por: " + nombreProfesional + ", en la fecha " + fecha;
+                document.getElementById('firmado').value = mensajeFirmado;
+                document.getElementById('mensajeFirmado').style.display = 'block';
+            }
+        </script>
+        <button type="button" id="botonEnviar" onclick="window.location.href = 'EvaluacionContinuaB13.html';">Atrás</button>
+        <button type="button" id="botonVolver" onclick="window.location.href = 'EvaluacionObjetivosB.html';">Siguiente</button>
+    </body>
+    </html>

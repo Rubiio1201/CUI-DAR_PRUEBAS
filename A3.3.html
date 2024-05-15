@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación </title>
+    <style>
+      /* Estilos CSS */
+      body {
+          font-family: Arial, sans-serif;
+          background: linear-gradient(90deg, #16A085, #F4D03F);
+      }
+
+      
+      </style>
+    
+</head>
+<body>
+    <h2>Se integra la HISTORIA DE VALORES en el Plan de Atención del paciente y la Familia (Deseos,sentimientos y creencias)</h2>
+    <form id="formulario">
+        <div id="pregunta1" class="pregunta">
+            <label for="encabezado">Se integra la ATENCIÓN CULTURAL en el Plan de Atención del Paciente y la familia</label>
+            <br>
+            <br>
+            <label for="pregunta1">¿Conocemos los valores culturales en relación con el fallecimiento, cuidados del cuerpo, o cualquier otro aspecto?</label><br>
+            <input type="radio" id="pregunta1_si" name="pregunta1" value="si">
+            <label for="pregunta1_si">Sí</label>
+            <input type="radio" id="pregunta1_no" name="pregunta1" value="no">
+            <label for="pregunta1_no">No</label>
+            <input type="radio" id="pregunta1_np/nv" name="pregunta1" value="np/nv">
+            <label for="pregunta1_np/nv">NP/NV</label><br>
+            <br>
+            <label for="pregunta1">Especificar:</label>
+            <input type="text" id="pregunta1" name="pregunta1"><br>
+            <br>
+            <button type="button" onclick="mostrarSiguiente('pregunta1', 'pregunta2')">Siguiente</button>
+            <button type="button" id="botonEnviar" onclick="window.location.href = 'A3.2.html';">Atrás</button>
+            </div>
+
+            <div id="pregunta2" class="pregunta" style="display: none;">
+            <label for="encabezado">Se integra la ATENCIÓN ESPIRITUAL en el Plan de Atención del paciente</label>
+            <label for="pregunta2">¿Conocemos las creencias espirituales Religiosas del paciente?</label><br>
+            <input type="radio" id="pregunta2_si" name="pregunta2" value="si">
+            <label for="pregunta2_si">Sí</label>
+            <input type="radio" id="pregunta2_no" name="pregunta2" value="no">
+            <label for="pregunta2_no">No</label>
+            <input type="radio" id="pregunta2_np/nv" name="pregunta2" value="np/nv">
+            <label for="pregunta2_np/nv">NP/NV</label><br>
+            <label for="pregunta2">Especificar:</label>
+            <input type="text" id="pregunta2" name="pregunta2"><br>
+            <br>
+            <label for="pregunta3">Se aborda la necesidad de acompañamiento espiritual por parte del equipo?</label><br>
+            <label for="spregunta3">Al paciente :</label>
+            <input type="radio" id="spregunta3_si" name="spregunta3" value="si">
+            <label for="spregunta3_si">Sí</label>
+            <input type="radio" id="spregunta3_no" name="spregunta3" value="no">
+            <label for="spregunta3_no">No</label>
+            <input type="radio" id="spregunta3_np/nv" name="spregunta3" value="np/nv">
+            <label for="spregunta3_np/nv">NP/NV</label><br>
+            <label for="sspregunta3">A la familia :</label>
+            <input type="radio" id="sspregunta3_si" name="sspregunta3" value="si">
+            <label for="sspregunta3_si">Sí</label>
+            <input type="radio" id="sspregunta3_no" name="sspregunta3" value="no">
+            <label for="sspregunta3_no">No</label>
+            <input type="radio" id="sspregunta3_np/nv" name="sspregunta3" value="np/nv">
+            <label for="sspregunta3_np/nv">NP/NV</label><br>
+            <br>
+            <label for="pregunta4">¿Se aborda la necesidad del apoyo de un representante de sus creencias/religión?</label><br>
+            <label for="spregunta4">Al paciente :</label>
+            <input type="radio" id="spregunta4_si" name="spregunta4" value="si">
+            <label for="spregunta4_si">Sí</label>
+            <input type="radio" id="spregunta4_no" name="spregunta4" value="no">
+            <label for="spregunta4_no">No</label>
+            <input type="radio" id="spregunta4_np/nv" name="spregunta4" value="np/nv">
+            <label for="spregunta4_np/nv">NP/NV</label><br>
+            <label for="sspregunta4">A la familia :</label>
+            <input type="radio" id="sspregunta4_si" name="sspregunta4" value="si">
+            <label for="sspregunta4_si">Sí</label>
+            <input type="radio" id="sspregunta4_no" name="sspregunta4" value="no">
+            <label for="sspregunta4_no">No</label>
+            <input type="radio" id="sspregunta4_np/nv" name="sspregunta4" value="np/nv">
+            <label for="sspregunta4_np/nv">NP/NV</label><br>
+            <br>
+            <button type="button" id="botonEnviar" onclick="window.location.href = 'EvaluacionObjetivosA.html';">Siguiente</button>
+            <button type="button" onclick="mostrarAnterior('pregunta2', 'pregunta1')">Atrás</button>
+        </form>
+
+
+        <script>
+        
+        function mostrarSiguiente(actual, siguiente) {
+                    document.getElementById(actual).style.display = "none";
+                    document.getElementById(siguiente).style.display = "block";
+                }
+        
+                function mostrarAnterior(actual, anterior) {
+                    document.getElementById(actual).style.display = "none";
+                    document.getElementById(anterior).style.display = "block";
+                }
+        </script>
+</body>
+ </html>
+                    
+
+
+
+

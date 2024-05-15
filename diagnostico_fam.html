@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(90deg, #16A085, #F4D03F);
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"],
+        input[type="number"] {
+            width: 100%;
+            padding: 12px; /* Ajusta el tamaño del padding para hacerlo más grande */
+            margin: 10px 0;
+            box-sizing: border-box;
+            font-size: 16px; /* Ajusta el tamaño del texto */
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        #mensaje {
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Diagnóstico Principal del Paciente</h2>
+        <form id="diagnosticoPaciente" action="A1.html">
+            <label for="diagnostico">Diagnóstico:</label>
+            <input type="text" id="diagnostico" name="diagnostico" required>
+            
+            <label for="comorbilidad">Comorbilidad:</label>
+            <input type="text" id="comorbilidad" name="comorbilidad" required>
+
+            <label for="numero">Ingrese un número del 0 al 6:</label>
+            <input type="number" id="numero" name="numero" min="0" max="6" required>
+
+            <input type="submit" value="Enviar" onclick="window.location.href = 'A1.html';">
+        </form>
+
+        <div id="mensaje"></div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Añadir Personas</title>
+</head>
+<body>
+
+<h2>Registro de Personas</h2>
+
+<form id="formularioPersonas">
+  <div id="personas">
+    <!-- Aquí se añadirán los campos de texto dinámicamente -->
+  </div>
+  <button type="button" onclick="agregarPersona()">Añadir Persona</button>
+  <button type="submit">Enviar</button>
+</form>
+
+<script>
+  function agregarPersona() {
+    const personasDiv = document.getElementById('personas');
+    const nuevaPersonaDiv = document.createElement('div');
+    nuevaPersonaDiv.innerHTML = `
+      
+      <input type="text" name="nombre[]" placeholder="Nombre y apellidos del cuidador principal" required>
+      <input type="text" name="relacion[]" placeholder="Relación con el paciente" required>
+      <input type="tel" name="telefono[]" placeholder="Nº de tlf" required>
+      <br>
+      <button type="button" onclick="eliminarPersona(this)">Eliminar persona</button>
+    `;
+    personasDiv.appendChild(nuevaPersonaDiv);
+  }
+
+  function eliminarPersona(elemento) {
+    elemento.parentNode.remove();
+  }
+</script>
+
+</body>
+</html>
